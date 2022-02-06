@@ -1,0 +1,126 @@
+.header {
+    padding-top: 43px;
+    display: flex;
+    align-items: center;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header-menu-link {
+    color: #262e36;
+    transition: color 0.2s ease-in-out;
+    font-size: 20px;
+}
+
+.header-menu-link:hover {
+    color: #579aff;
+}
+
+.header-auth {
+    margin-left: auto;
+}
+
+.header-logo-image {
+    width: 100px;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .header-menu-item:not(:first-child) {
+        margin-left: 75px;
+    }
+    .header-logo {
+        display: block;
+        margin-right: 180px;
+    }
+    .menu-toggle{
+        display: none !important;
+    }
+    
+}
+
+
+@media screen and (max-width: 1279.98px) {
+    .header-logo {
+        margin-right: 0;
+    }
+
+    .header-menu {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 1023.98px) {
+    .header {
+        padding-top: 20px;
+    }
+
+    .menu-toggle{
+        font-size: 25px;
+        margin-left: 20px;  
+    }
+
+    .header-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        background-color: white;
+        z-index: 9999;
+        display: block;
+        bottom: 0;
+        border-left: 1px solid #262e36;
+        padding: 50px 15px;
+        transition: transform 0.25s linear;
+        transform: translateX(100%);
+    }
+
+    .header-menu.is-active{
+        transform: translateX(0);
+    }
+
+    .header-menu-link{
+        display: block;
+        padding: 20px;
+    }
+
+    .header-menu-link:hover{
+        color: white;
+        background-color: #579aff;
+        border-radius: 5px;
+    }
+
+    .header-auth {
+        margin-left: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 767.98px) {
+    .header {
+        padding-top: 20px;
+    }
+
+    .header-logo-image {
+        max-width: 80px;
+    }
+
+    .header-auth {
+        display: flex;
+    }
+
+    .header-auth * {
+        width: 100px;
+    }
+
+    .header-logo {
+        margin-right: 30px;
+    }
+}

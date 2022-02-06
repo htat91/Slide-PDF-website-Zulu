@@ -1,0 +1,130 @@
+.client{
+    margin-bottom: 100px;
+}
+
+.client-list{
+    display: flex;
+}
+
+.client-item{
+    flex-grow: 1;
+    padding: 45px 25px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.4;
+    transition: all 0.2s linear;
+}
+
+
+.client-item:hover{
+    border-color:transparent ;
+    box-shadow: 0 0 10px 0 gray;
+}
+
+.client-name{
+    font-size: 30px;
+    font-weight: 600;
+    margin:  5px 0px;
+}
+
+.client-job{
+    font-size: 14px;
+    display: block;
+    padding-bottom: 25px;
+}
+
+.client-desc{
+    margin-bottom: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 100%;
+    word-break: break-word;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.client-rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-rating i{
+    margin: 0 5px;
+    color: #ffcb46;
+}
+
+.client-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100rem;
+    object-fit: cover;
+    margin: 0 auto;
+
+}
+
+@media (hover:hover){
+    .client-item:hover{
+        border-color:transparent ;
+        box-shadow: 0 0 10px 0 gray;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .client-item:not(:first-child){
+        margin-left: 70px;
+    }
+}
+
+
+@media screen and (max-width: 1023.98px) {
+    .client-list {
+
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 400px;
+        grid-auto-flow: column;
+        grid-gap: 0 20px;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+    }
+
+    .client-list ::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+
+    .client-list > * {
+        scroll-snap-align: start;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .client-list{
+        grid-auto-columns: 300px;
+        grid-gap:0 10px;
+    }
+    .work-title{
+        text-align: center;
+    }
+    .block-heading{
+        font-size: 30px;
+    }
+}

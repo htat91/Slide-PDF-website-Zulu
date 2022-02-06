@@ -1,0 +1,155 @@
+.plan {
+    padding-bottom: 100px;
+}
+
+.plan-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+
+}
+
+.plan-item {
+    padding: 40px 30px;
+    border: 1px solid #f4f4f4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+    transition: all 0.2s linear;
+    position: relative;
+}
+
+.plan-item:hover {
+    border-color: transparent;
+    box-shadow: 0 0 10px 0 gray;
+}
+
+.plan-item:hover .start-now {
+    border-color: #579aff;
+    background-color: #579aff;
+    color: white;
+}
+
+.plan-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.plan-price {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-symbol {
+    vertical-align: top;
+}
+
+.plan-month {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.plan-desc {
+    margin-bottom: 55px;
+}
+
+.plan-feature {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.plan-feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.plan-feature-item:last-of-type {
+    margin-bottom: 75px;
+}
+
+.plan-feature-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.plan-feature-title {
+    font-weight: 300;
+}
+
+.plan-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    background-color: #ff858d;
+    color: white;
+    border-radius: 0 20px 0 20px;
+    font-size: 14px;
+}
+
+.start-now {
+    text-align: center;
+    transition: all 0.2s linear;
+    margin: auto auto 0;
+    width: max-content;
+}
+
+@media (hover:hover){
+    .plan-item:hover {
+        border-color: transparent;
+        box-shadow: 0 0 10px 0 gray;
+    }
+    
+    .plan-item:hover .start-now {
+        border-color: #579aff;
+        background-color: #579aff;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .plan-list {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 500px;
+        grid-auto-flow: column;
+        grid-gap: 0 50px;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+    }
+
+    .plan-list ::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+
+    .plan-list > * {
+        scroll-snap-align: start;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .plan-list{
+        grid-auto-columns: 300px;
+        grid-gap:0 10px;
+    }
+    .block-heading{
+        font-size: 30px;
+    }
+}
